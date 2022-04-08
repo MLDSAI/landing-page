@@ -172,32 +172,31 @@ $contactForm.submit((e) => {
   $dimmer.dimmer({closable: false})
   $dimmer.dimmer('show')
 
-  $.post(
-    "/contact/",
-    JSON.stringify({ name, email, phone, message }),
-    (data) => {
-      console.log('data:', data)
-      if (!('error' in data)) {
-        let height = $contactForm.height()
-        let $thankYou = $(`
-          <h2>Thank You!</h2>
-          <i id="paper-plane" class="ui icon paper plane outline"></i>
-          <p>
-            Your submission has been received. We will be in touch shortly!
-          </p>
-        `)
-        $thankYou.hide()
-        $contactForm.replaceWith($thankYou)
-        $thankYou.fadeIn()
-        $dimmer.dimmer('hide')
-      } else {
-        $dimmer.html(`
-          <h1>Something went wrong</h1>
-          <h2>Please refresh the page and try again.</h2>
-        `)
-      }
-    }
-  )
+  const serviceID = 'service_tyhy8oj';
+  const templateID = 'template_uo50m8o';
+  const templateParams = { message };
+  emailjs.send(serviceID, templateID, templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       let height = $contactForm.height()
+       let $thankYou = $(`
+         <h2>Thank You!</h2>
+         <i id="paper-plane" class="ui icon paper plane outline"></i>
+         <p>
+           Thank you for sending us a message!
+         </p>
+       `)
+       $thankYou.hide()
+       $contactForm.replaceWith($thankYou)
+       $thankYou.fadeIn()
+       $dimmer.dimmer('hide')
+    }, function(error) {
+       console.log('FAILED...', error);
+       $dimmer.html(`
+         <h1>Something went wrong</h1>
+         <h2>Please refresh the page and try again.</h2>
+       `)
+    });
 })
 
 // date
