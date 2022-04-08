@@ -102,10 +102,6 @@
     color: #eee !important;
   }
 
-  /* .center {
-      margin: 0 auto !important;
-      padding-top: 3em;
-  } */
 
   #clients .cards,
   #team .cards {
@@ -134,10 +130,6 @@
   }
   
 
-  /* * {
-      outline: 1px solid gray;
-  } */
-
   #logos {
     display: flex;
     justify-content: space-between;
@@ -155,7 +147,6 @@
     align-items: center;
     transition: all .2s ease-in-out !important;
 
-    /* height: 120px; */
   }
   #logos img {
     height: 100%;
