@@ -65,6 +65,16 @@
 
     /* padding-top: 83px; */
   }
+
+  .section.dark {
+    background: #000033;
+    color: #eee;
+    background: radial-gradient(circle,
+      rgba(0,0,75,1) 0%,
+      rgba(0,0,60,1) 75%,
+      rgba(0,0,45,1) 100%
+    );
+  }
   .section:first-of-type {
     min-height: 100vh;
     padding: 0;
@@ -92,6 +102,34 @@
     color: #eee !important;
   }
 
+
+  #clients .cards,
+  #team .cards {
+      padding-top: 3em;
+      margin: 0 auto;
+      max-width: 90%;
+  }
+
+  #clients .card,
+  #team .card {
+    width: calc(25% - 4em);
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+
+
+  @media only screen and (max-width: 767.98px) {  
+    .ui.stackable.cards>.card {
+      margin-left: 1em !important;
+    }
+  }
+  /* First and last child fix for Fomantic-UI */
+  #team .ui.card {
+      margin: 0 !important;
+  }
+  
+
   #logos {
     display: flex;
     justify-content: space-between;
@@ -109,7 +147,6 @@
     align-items: center;
     transition: all .2s ease-in-out !important;
 
-    height: 120px;
   }
   #logos img {
     height: 100%;
@@ -250,7 +287,7 @@
     flex-wrap: wrap;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     margin: 40px 20px 40px;
   }
