@@ -1,5 +1,59 @@
 
 (function() {
+
+  function renderLogo() {
+    // TODO: move to template inside index.html?
+    const logoHtml = `
+      <div class="row first-row">
+        <div class="left-col ml">
+          <span>
+            A
+          </span>
+          <span>
+            L
+          </span>
+        </div>
+        <div class="right-col machine-learning">
+          <span>
+            Asset Leveraged
+          </span>
+        </div>
+      </div>
+      <div class="row second-row">
+        <div class="left-col ds">
+          <span>
+            P
+          </span>
+          <span>
+            H
+          </span>
+        </div>
+        <div class="right-col data-science">
+          <span>
+            Proffessional Hacker
+          </span>
+        </div>
+      </div>
+      <div class="row third-row">
+        <div class="left-col ai">
+          <span>
+            A
+          </span>
+        </div>
+        <div class="right-col artificial-intelligence">
+          <span>
+            Association
+          </span>
+        </div>
+      </div>
+    `;
+    logoEls = document.querySelectorAll('.logo');
+    for (const logoEl of logoEls) {
+      logoEl.innerHTML = logoHtml;
+    }
+  }
+  renderLogo();
+
   const logoEl = document.querySelector('#logo-main')
 
   const targetElId = '#logo-nav'
