@@ -15,34 +15,22 @@
         </div>
         <div class="right-col machine-learning">
           <span>
-            Asset Leveraged
+            Advanced Leadership
           </span>
         </div>
       </div>
       <div class="row second-row">
         <div class="left-col ds">
           <span>
-            P
+            F
           </span>
-          <span>
-            H
-          </span>
-        </div>
-        <div class="right-col data-science">
-          <span>
-            Proffessional Hacker
-          </span>
-        </div>
-      </div>
-      <div class="row third-row">
-        <div class="left-col ai">
           <span>
             A
           </span>
         </div>
-        <div class="right-col artificial-intelligence">
+        <div class="right-col data-science">
           <span>
-            Association
+            Faciliation Agency
           </span>
         </div>
       </div>

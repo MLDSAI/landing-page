@@ -506,6 +506,9 @@ span {
   border-top: none;
   /*border-right: 4px solid #000033;*/
 }
+.second-row:last-of-type .right-col {
+  border-bottom: none;
+}
 .inverted .right-col * {
   color: white !important;
 }
